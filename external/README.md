@@ -4,11 +4,11 @@ The purpose of the external folder is to provide a simple location for the SFML 
 
 Example - To create your sfml subfolder you might execute a command like:
 
-git clone https://github.com/SFML/SFML sfml
+	git clone https://github.com/SFML/SFML sfml
 
-- OR -
+OR
 
-ln -s <my sfml source dir> sfml
+	ln -s <my sfml source dir> sfml
 
 ## Mini-FAQ
 
@@ -43,4 +43,3 @@ Git URL: https://github.com/TankOs/SFGUI
 #### TGUI - Optional
 Subfolder Name: tgui
 Git URL: https://github.com/texus/TGUI
-

@@ -8,7 +8,7 @@ if(EXISTS "${CMAKE_SOURCE_DIR}/${SFMLBOOTSTRAP_EXTERNAL_DIR}/sfgui" AND IS_DIREC
 	)
         ExternalProject_Add_Step(sfgui forcebuild COMMAND ${CMAKE_COMMAND} -E echo "Force build of sfgui" DEPENDEES configure DEPENDERS build ALWAYS 1)
         include_directories(${CMAKE_SOURCE_DIR}/${SFMLBOOTSTRAP_EXTERNAL_DIR}/sfgui/include)
-        add_dependencies(sfgui sfml)
+        add_dependencies(sfgui ${PROJ_DEPS})
         set(SFGUI_LIBS debug ${PROJ_BUILD_DIR}/lib/${CMAKE_STATIC_LIBRARY_PREFIX}sfgui-s-d${CMAKE_STATIC_LIBRARY_SUFFIX} optimized ${PROJ_BUILD_DIR}/lib/${CMAKE_STATIC_LIBRARY_PREFIX}sfgui-s${CMAKE_STATIC_LIBRARY_SUFFIX})
         list(APPEND PROJ_LIBS ${SFGUI_LIBS})
         list(APPEND PROJ_DEPS sfgui)

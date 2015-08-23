@@ -7,7 +7,7 @@ if(EXISTS "${CMAKE_SOURCE_DIR}/${SFMLBOOTSTRAP_EXTERNAL_DIR}/tgui" AND IS_DIRECT
           CMAKE_ARGS "${TGUI_CMAKE_ARGS}"
 	)
         ExternalProject_Add_Step(tgui forcebuild COMMAND ${CMAKE_COMMAND} -E echo "Force build of tgui" DEPENDEES configure DEPENDERS build ALWAYS 1)
-	add_dependencies(tgui sfml)
+	add_dependencies(tgui ${PROJ_DEPS})
         include_directories(${CMAKE_SOURCE_DIR}/${SFMLBOOTSTRAP_EXTERNAL_DIR}/tgui/include)
         set(TGUI_LIBS debug ${PROJ_BUILD_DIR}/lib/${CMAKE_STATIC_LIBRARY_PREFIX}tgui-s-d${CMAKE_STATIC_LIBRARY_SUFFIX} optimized ${PROJ_BUILD_DIR}/lib/${CMAKE_STATIC_LIBRARY_PREFIX}tgui-s${CMAKE_STATIC_LIBRARY_SUFFIX})
         list(APPEND PROJ_LIBS ${TGUI_LIBS})

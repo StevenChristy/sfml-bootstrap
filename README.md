@@ -10,7 +10,7 @@ I created this project mostly for myself. I hope you find it useful for your own
 2. Ease of reuse - I don't want to have to customize my CMakeLists.txt for each project that uses a different set of SFML dependent libraries - easily switch out libraries by creating a symbolic link in the external folder.
 3. No-hassle rebuilding and contributing - Make changes to the libraries source code and watch your project quickly rebuild and relink. Great for contributing back or making changes to your own fork.
 
-## Using the bootstrap - New Project
+## Setup New Project
 
 Step 1: Download the latest version of this project into a new directory on your computer.
 
@@ -18,11 +18,11 @@ Step 2: Put your SFML source code in the external/sfml subfolder (tip: you must 
 
 Step 3: Customize the existing CMakeLists.txt as you add source files for your project.
 
-## Using the bootstrap - Existing Project (Not Recommended)
+## Setup Existing Project (Not Recommended)
 
 In an existing project there are many things that can go wrong. But assuming everything works fine, these are steps you'd follow:
 
-Step 1: Copy the cmake/sfml-bootstrap folder into your project.
+Step 1: Copy the cmake/sfml-bootstrap folder into your project source directory.
 
 Step 2: Create an external folder in your project source directory.
 
@@ -64,4 +64,8 @@ SFML, SFGUI, TGUI - See external/README.md for more details.
 
 ## Notes
 
-This project will never support dynamic linking so please don't make requests for it. Other requests will be considered. Feel free to contribute cmake files for statically linking other libraries that might be used along side SFML - provided these libraries use a permissive non-copyleft license.
+This project will never support dynamic linking so please don't make requests for it. Other requests will be considered. Feel free to contribute cmake files for statically linking other libraries that might be used along side SFML - provided these libraries use a permissive non-copyleft license and cmake as their build system.
+
+## License
+
+The cmake files included in this project are licensed under a zlib/png license, the same exact license used by SFML. See cmake/sfml-bootstrap/license.txt for more details.
