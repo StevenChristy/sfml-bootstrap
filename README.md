@@ -30,6 +30,10 @@ Step 2: Execute some commands like this:
 	cd external
 	git clone https://github.com/SFML/SFML sfml
 
+Step 3: Update the README.md, edit the CMakeLists.txt and clean out the comments, add source code, etc.
+
+Step 4: Use cmake generate your new project.
+
 ## Setup Existing Project (Not Recommended)
 
 In an existing project there are many things that can go wrong. But assuming everything works fine, these are steps you'd follow:
