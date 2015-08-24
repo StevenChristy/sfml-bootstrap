@@ -10,13 +10,25 @@ I created this project mostly for myself. I hope you find it useful for your own
 2. Ease of reuse - I don't want to have to customize my CMakeLists.txt for each project that uses a different set of SFML dependent libraries - easily switch out libraries by creating a symbolic link in the external folder.
 3. No-hassle rebuilding and contributing - Make changes to the libraries source code and watch your project quickly rebuild and relink. Great for contributing back or making changes to your own fork.
 
-## Setup New Project
+## Setup New Project - Basic
 
 Step 1: Download the latest version of this project into a new directory on your computer.
 
 Step 2: Put your SFML source code in the external/sfml subfolder (tip: you must create the folder). See external/README.md for more details.
 
 Step 3: Customize the existing CMakeLists.txt as you add source files for your project.
+
+## Setup a New Github Project
+
+Step 1: Create the github repository DO NOT include a README.md file.
+
+Step 2: Execute commands like this:
+
+	git clone https://github.com/<myuser>/<mynewrepo>
+	cd <mynewrepo>
+	svn export https://github.com/StevenChristy/sfml-bootstrap/trunk . --force
+	
+That last command is correct. You can use svn to quickly dump the bootstrap files into your new repo.
 
 ## Setup Existing Project (Not Recommended)
 
