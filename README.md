@@ -22,13 +22,13 @@ Step 3: Customize the existing CMakeLists.txt as you add source files for your p
 
 Step 1: Create the github repository DO NOT include a README.md file.
 
-Step 2: Execute commands like this:
+Step 2: Execute some commands like this:
 
 	git clone https://github.com/<myuser>/<mynewrepo>
 	cd <mynewrepo>
 	svn export https://github.com/StevenChristy/sfml-bootstrap/trunk . --force
-	
-That last command is correct. You can use svn to quickly dump the bootstrap files into your new repo.
+	cd external
+	git clone https://github.com/SFML/SFML sfml
 
 ## Setup Existing Project (Not Recommended)
 
