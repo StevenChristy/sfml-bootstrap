@@ -58,17 +58,17 @@ Step 6: Add dependency information with ${PROJ_DEPS} to help CMake figure out wh
 
 ## Currently Supported Platforms
 
-Linux - Tested on Ubuntu 15.10 - You will need to download and install sfml dependencies see SFML documentation for more details.
-Windows - MINGW - Works
-Windows - MSVC - Has issues - probably easily resolved, but I haven't had time to look at this.
+* Linux - Tested on Ubuntu 15.10 - You will need to download and install sfml dependencies see SFML documentation for more details.
+* Windows - MINGW - Works
+* Windows - MSVC - Has issues - probably easily resolved, but I haven't had time to look at this.
 
 ## Future Platforms
 
-Ideally a contributor will be needed to claim support these platforms:
+A contributor will be needed to support these platforms:
 
-Mac
-Android
-iOS
+* Mac
+* Android
+* iOS
 
 Partial support should be in there by virtue of using the original unmodified versions of the SFML and other libraries. To the extent those libraries support your target OS you should find that there are only a few additional things you might need to add to your project to make it work for these systems. Specifically the cmake/sfml-bootstrap/*.cmake files will need to be modified to link in the correct libraries for the target OS and maybe specify other platform specific linker parameters.
 
