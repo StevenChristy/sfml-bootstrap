@@ -59,8 +59,8 @@ Step 6: Add dependency information with ${PROJ_DEPS} to help CMake figure out wh
 ## Currently Supported Platforms
 
 Linux - Tested on Ubuntu 15.10 - You will need to download and install sfml dependencies see SFML documentation for more details.
-
-Windows - Untested - The conditionals are in there, but it needs to be tested. I'll get around to it later, but Windows is not my personal choice for an OS. Will support both mingw and MSVC.
+Windows - MINGW - Works
+Windows - MSVC - Has issues - probably easily resolved, but I haven't had time to look at this.
 
 ## Future Platforms
 
