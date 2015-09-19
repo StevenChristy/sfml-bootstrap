@@ -10,13 +10,29 @@ I created this project mostly for myself. I hope you find it useful for your own
 2. Ease of reuse - I don't want to have to customize my CMakeLists.txt for each project that uses a different set of SFML dependent libraries - easily switch out libraries by creating a symbolic link in the external folder.
 3. No-hassle rebuilding and contributing - Make changes to the libraries source code and watch your project quickly rebuild and relink. Great for contributing back or making changes to your own fork.
 
-## Setup New Project
+## Setup New Project - Basic
 
 Step 1: Download the latest version of this project into a new directory on your computer.
 
 Step 2: Put your SFML source code in the external/sfml subfolder (tip: you must create the folder). See external/README.md for more details.
 
 Step 3: Customize the existing CMakeLists.txt as you add source files for your project.
+
+## Setup a New Github Project
+
+Step 1: Create the github repository DO NOT include a README.md file.
+
+Step 2: Execute some commands like this:
+
+	git clone https://github.com/<myuser>/<mynewrepo>
+	cd <mynewrepo>
+	svn export https://github.com/StevenChristy/sfml-bootstrap/trunk . --force
+	cd external
+	git clone https://github.com/SFML/SFML sfml
+
+Step 3: Update the README.md, edit the CMakeLists.txt and clean out the comments, add source code, etc.
+
+Step 4: Use cmake generate your new project.
 
 ## Setup Existing Project (Not Recommended)
 
@@ -42,17 +58,17 @@ Step 6: Add dependency information with ${PROJ_DEPS} to help CMake figure out wh
 
 ## Currently Supported Platforms
 
-Linux - Tested on Ubuntu 15.10 - You will need to download and install sfml dependencies see SFML documentation for more details.
-
-Windows - Untested - The conditionals are in there, but it needs to be tested. I'll get around to it later, but Windows is not my personal choice for an OS. Will support both mingw and MSVC.
+* Linux - Tested on Ubuntu 15.10 - You will need to download and install sfml dependencies see SFML documentation for more details.
+* Windows - MINGW - Works
+* Windows - MSVC - Has issues - probably easily resolved, but I haven't had time to look at this.
 
 ## Future Platforms
 
-Ideally a contributor will be needed to claim support these platforms:
+A contributor will be needed to support these platforms:
 
-Mac
-Android
-iOS
+* Mac
+* Android
+* iOS
 
 Partial support should be in there by virtue of using the original unmodified versions of the SFML and other libraries. To the extent those libraries support your target OS you should find that there are only a few additional things you might need to add to your project to make it work for these systems. Specifically the cmake/sfml-bootstrap/*.cmake files will need to be modified to link in the correct libraries for the target OS and maybe specify other platform specific linker parameters.
 
