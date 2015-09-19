@@ -76,7 +76,7 @@ Contributions in the form of a pull request or patch file are appreciated.
 
 ## Currently Supported Libraries
 
-SFML, SFGUI, TGUI, libnoise, bullet2 - See external/README.md for more details.
+SFML, SFGUI, TGUI, bullet2 - See external/README.md for more details.
 
 ## Notes
 
