@@ -33,13 +33,33 @@ NOTE: On Linux the subfolder name is case sensitive.
 This version of the sfml-bootstrap project supports the following:
 
 #### SFML Library - Required
+
 Subfolder Name: sfml
+
 Git URL: https://github.com/SFML/SFML
 
 #### SFGUI - Optional
+
 Subfolder Name: sfgui
+
 Git URL: https://github.com/TankOs/SFGUI
 
 #### TGUI - Optional
+
 Subfolder Name: tgui
+
 Git URL: https://github.com/texus/TGUI
+
+#### Bullet2 - Optional
+
+Subfolder Name: bullet2
+
+Git URL: https://github.com/bulletphysics/bullet3
+
+#### libnoise - Optional
+
+Subfolder Name: libnoise
+
+Git URL: https://github.com/eXpl0it3r/libnoise
+
+NOTE: This unofficial repo supports CMake.

@@ -7,6 +7,9 @@ if(EXISTS "${CMAKE_SOURCE_DIR}/${SFMLBOOTSTRAP_EXTERNAL_DIR}/sfml" AND IS_DIRECT
           CMAKE_ARGS "${SFML_CMAKE_ARGS}"
         )
         ExternalProject_Add_Step(sfml forcebuild COMMAND ${CMAKE_COMMAND} -E echo "Force build of sfml" DEPENDEES configure DEPENDERS build ALWAYS 1)
+        if(PROJ_DEPS)
+            add_dependencies(sfml ${PROJ_DEPS})
+        endif()
         # Specify absolute paths to these libraries so that if they are rebuilt our application will relink.
         set(SFML_LIBS
                 debug ${PROJ_BUILD_DIR}/lib/${CMAKE_STATIC_LIBRARY_PREFIX}sfml-audio-s-d${CMAKE_STATIC_LIBRARY_SUFFIX}
