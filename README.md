@@ -80,7 +80,7 @@ SFML, SFGUI, TGUI, libnoise, bullet2 - See external/README.md for more details.
 
 ## Notes
 
-This project will never support dynamic linking so please don't make requests for it. Other requests will be considered. Feel free to contribute cmake files for statically linking other libraries that might be used along side SFML - provided these libraries use a permissive non-copyleft license and cmake as their build system.
+This project will never support dynamic linking. Contributions are welcome in the form of pull requests that add additional library, compiler, and OS support. Please contribute only cmake files for statically linking other libraries that might be used along side SFML - provided these libraries use a permissive non-copyleft open source license and cmake as their build system they will be graciously accepted. Contributors should update the documentation to reflect their project additions and add their name to the AUTHORS file.
 
 ## License
 
