@@ -55,11 +55,3 @@ Git URL: https://github.com/texus/TGUI
 Subfolder Name: bullet2
 
 Git URL: https://github.com/bulletphysics/bullet3
-
-#### libnoise - Optional
-
-Subfolder Name: libnoise
-
-Git URL: https://github.com/eXpl0it3r/libnoise
-
-NOTE: This unofficial repo supports CMake.
