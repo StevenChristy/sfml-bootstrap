@@ -25,7 +25,7 @@ if(EXISTS "${CMAKE_SOURCE_DIR}/${SFMLBOOTSTRAP_EXTERNAL_DIR}/sfml" AND IS_DIRECT
         include_directories(${PROJECT_SOURCE_DIR}/${SFMLBOOTSTRAP_EXTERNAL_DIR}/sfml/include)
         add_definitions(-DSFML_STATIC)
         if(UNIX)
-                set(SYSTEM_LIBS GLU GL xcb X11-xcb xcb-image xcb-randr udev rt X11 Xext freetype jpeg sndfile openal pthread)
+                set(SYSTEM_LIBS GLEW GLU GL xcb X11-xcb xcb-image xcb-randr udev rt X11 Xext freetype jpeg sndfile openal pthread)
         elseif(WIN32)
                 if(MINGW)
                         link_directories(${CMAKE_SOURCE_DIR}/${SFMLBOOTSTRAP_EXTERNAL_DIR}/sfml/extlibs/libs-mingw/${CURRENT_ARCH})
